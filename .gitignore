@@ -1,0 +1,28 @@
+# Arquivos de vídeo (muito pesados para GitHub)
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Arquivos temporários do MoviePy
+*TEMP_MPY*
+
+# Python
+__pycache__/
+*.pyc
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos que não fazem parte da landing page
+editor_de_video.py
+estrategia_del_webb.md
+gerador_mapa_escassez.html
+legendas_venda.srt
+roteiro_edicao_ouro.md
+roteiro_locucao_ia.txt
+textos_venda_high_ticket.md
+ROTEIRO*.txt
+Roteiro*.txt
+*.pdf
