@@ -482,6 +482,224 @@ p {
     .map-image { width: 150%; margin-left: -25%; /* zoom fake */ }
 }
 
+/* ================== SEÇÃO PRESTAÇÕES EM GUARANI ================== */
+.prestacoes-section {
+    padding: 90px 0;
+    background: var(--bg-dark);
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.prestacoes-header {
+    margin-bottom: 50px;
+}
+
+.prestacoes-badge {
+    display: inline-block;
+    background: rgba(212, 175, 55, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: var(--gold);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.prestacoes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.prestacao-card {
+    background: var(--bg-medium);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 14px;
+    padding: 36px 30px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.prestacao-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: rgba(255,255,255,0.08);
+}
+
+.prestacao-card--destaque {
+    border-color: var(--gold-dark);
+    background: linear-gradient(160deg, #1a1500 0%, var(--bg-medium) 100%);
+    box-shadow: 0 8px 40px rgba(212, 175, 55, 0.08);
+}
+
+.prestacao-card--destaque::before {
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold));
+}
+
+.prestacao-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.12);
+}
+
+.prestacao-lotes-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.06);
+    color: var(--text-muted);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.prestacao-lotes-tag.gold-tag {
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--gold);
+    border-color: rgba(212, 175, 55, 0.35);
+}
+
+.prestacao-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 20px;
+}
+
+.prestacao-cuotas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cuotas-numero {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    color: var(--text-main);
+    line-height: 1;
+}
+
+.cuotas-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+}
+
+.prestacao-divider {
+    width: 1px;
+    height: 70px;
+    background: rgba(255,255,255,0.1);
+    flex-shrink: 0;
+}
+
+.prestacao-valor-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.prestacao-valor-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.prestacao-valor {
+    font-family: var(--font-heading);
+    font-size: 1.7rem;
+    color: var(--text-main);
+    line-height: 1.1;
+}
+
+.prestacao-por {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.prestacao-detalhe {
+    background: rgba(0,0,0,0.3);
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 10px;
+}
+
+.prestacao-detalhe strong {
+    color: var(--text-main);
+}
+
+/* Caixa de aviso / esclarecimento */
+.prestacoes-aviso {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(212, 175, 55, 0.04);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+    padding: 24px 28px;
+    flex-wrap: wrap;
+}
+
+.aviso-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.aviso-texto {
+    flex: 1;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.aviso-texto strong {
+    color: var(--text-main);
+}
+
+@media (max-width: 768px) {
+    .prestacoes-grid {
+        grid-template-columns: 1fr;
+    }
+    .prestacao-info {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .prestacao-divider {
+        width: 70px;
+        height: 1px;
+    }
+    .prestacao-valor-wrap {
+        align-items: center;
+    }
+    .prestacoes-aviso {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 /* FOOTER */
 footer {
     padding: 40px 0;
